@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="c3.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<link href="c3.css" rel="stylesheet">
+<html lang="de" onkeypress="keypress()">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily-Timer.</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+  <!-- Sichtbarer Dokumentinhalt im body -->
+  <!-- <p id="abc">Sie haben nur 15 Minuten zeit.
+    <kbd id="abc2">(Kontextmenu: Seitenquelltext anzeigen)</kbd></p> -->
+  <p class="row container-fluid col-xs-12"></p>
+    <div class="row container-fluid">
+      <p class="col-xs-1 text-center"></p>
+      <a class="button col-xs-5 text-center plusminus" onclick="plus1min()">+1 min
+      <script type="text/javascript" src="timer.js"></script>
+    </a>
+      <a class="button text-center col-xs-2 plusminus" onclick="plus10sec()">+10 sec
+      <script type="text/javascript" src="timer.js"></script>
+    </a>
+      <p class="col-xs-1"></p>
+      <a class="button col-xs-2 text-center plusminus" onclick="plus1sec()">+1 sec
+        <script type="text/javascript" src="timer.js"></script>
+      </a>
+    </div>
+    <div style="h" class="row container-fluid">
+      <p id="timer" class="text-center"></p>
+    </div>
+
+
+    <h2>
+      <audio id="audio" src="Censored_Beep-Mastercard-569981218.mp3" preload="auto"></audio>
+      <audio id="shortbeep" src="Short Beep Tone-SoundBible.com-1937840853.mp3" preload="auto"> </audio>
+      <div class="row container-fluid">
+        <p class="col-xs-1"></p>
+        <a class="button col-xs-5 text-center plusminus" onclick=" minus1min()">-1 min    
+        <script type="text/javascript" src="timer.js"></script>
+      </a>
+        <a class="button col-xs-2 text-center plusminus" onclick="minus10sec()">-10 sec   
+        <script type="text/javascript" src="timer.js"></script>
+      </a>
+        <p class="col-xs-1 spacer"></p>
+        <a class="button col-xs-2 text-center plusminus" onclick="minus1sec()">-1 sec   
+        <script type="text/javascript" src="timer.js"></script>
+      </a>
+        <p class="col-xs-1 spacer"></p>
+      </div>
+      <div class="row container-fluid">
+        <p class="col-xs-2"></p>
+        <label class="switch col-xs-3">
+         <input type="checkbox" onclick="musiconoff()" ><span class="slider round"></span>
+      </label>
+        <div class="col-xs-4 switchtext">Sound On/Off</div>
+        <label class="switch col-xs-4">
+        <input type="checkbox" onclick="chartonoff()"> <span class="slider round"></span>
+      </label>
+        <p class="clo-xs-2 switchtext">Time-Ring On/Off</p>
+      </div>
+      <div class="row container-fluid">
+        <p class="col-xs-1"></p>
+        <a class="button col-xs-2 text-center" onclick="start()">Start    
+        <script type="text/javascript" src="timer.js"></script>
+      </a>
+        <div id="chart" class=" text-center col-xs-6"> </div>
+        <a class="button col-xs-2 text-center" onclick="reset()">Reset    
+        <script type="text/javascript" src="timer.js"></script>
+      </a>
+      </div>
+    </h2>
+</body>
+
+</html>
